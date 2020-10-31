@@ -1,7 +1,7 @@
 namespace L03_CocktailBar {
     window.addEventListener("load", handleLoad);
 
-    function handleLoad(_event: Event): void {
+    function handleLoad(_event: Event): void {  // In der Klammer Parameter vom Typ Event - Funktion wird im Rahmen eines Events aufgerufen
         console.log("Start");
         let form: HTMLDivElement = <HTMLDivElement>document.querySelector("div#form");
         let slider: HTMLInputElement = <HTMLInputElement>document.querySelector("input#amount");
@@ -18,8 +18,16 @@ namespace L03_CocktailBar {
         // let inputs: NodeListOf<HTMLInputElement> = document.querySelectorAll("input");
         // console.log(inputs);
 
-        let order: HTMLDivElement = <HTMLDivElement>document.querySelector("div#order");
+        let order: HTMLDivElement = <HTMLDivElement>document.querySelector("div#order");  //.queryselector um auf Element zuzugreifen?
+
         order.innerHTML = "";
+
+
+
+
+
+
+
 
         let formData: FormData = new FormData(document.forms[0]);
         for (let entry of formData) {
